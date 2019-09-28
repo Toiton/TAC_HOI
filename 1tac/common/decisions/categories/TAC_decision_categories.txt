@@ -1,0 +1,11 @@
+TAC_national_decisions = {
+
+	icon = 	decision_category_military_operation
+	allowed = {
+		tag = TAC
+	}
+	
+	#visible = {
+	#has_country_flag = TAC_completed_political_reform
+	#}
+}

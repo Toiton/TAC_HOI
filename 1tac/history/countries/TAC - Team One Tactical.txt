@@ -1,0 +1,140 @@
+﻿capital = 784
+
+#Technology
+set_research_slots = 3
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	infantry_weapons2 = 1
+	improved_infantry_weapons = 1
+	gwtank = 1
+	basic_light_tank = 1
+	improved_light_tank = 1
+	gw_artillery = 1
+	tech_support = 1		
+	tech_engineers = 1
+	early_fighter = 1
+	basic_machine_tools = 1
+	fuel_silos = 1
+	construction1 = 1
+}
+#Politics
+diplomatic_relation = { country = GER relation = non_aggression_pact }
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 24
+	elections_allowed = no
+}
+set_war_support = 0.3
+set_stability = 0.6
+
+set_popularities = {
+	democratic = 5
+	fascism = 14
+	communism = 11
+	neutrality = 70
+}
+
+create_country_leader = {
+	name = "Snippers"
+	desc = "POLITICS_NEUTRAL_SNIPPERS_DESC"
+	picture = "Portrait_Neutrality_Snippers_1.dds"
+	expire = "1965.1.1"
+	ideology = oligarchism
+	traits = {
+		el_jefe_maximo fascist_sympathies
+	}
+}
+
+create_country_leader = {
+	name = "Comrade Snippers"
+	desc = "POLITICS_COMMUNIST_SNIPPERS_DESC"
+	picture = "Portrait_Communist_Snippers_1.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		stalins_puppet veteran_communist
+	}
+}
+
+create_country_leader = {
+	name = "Herr Snippler"
+	desc = "POLITICS_FASCIST_SNIPPERS_DESC"
+	picture = "Portrait_Facist_Snippers_1.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		dictator indomitable_perseverance
+	}
+}
+
+create_country_leader = {
+	name = "President Snoppler"
+	desc = "POLITICS_DEMOCRATIC_SNIPPERS_DESC"
+	picture = "Portrait_Democratic_Snippers_1.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		rearmer dealbroker conservative_grandee
+	}
+}
+
+#Armed Forces
+oob = "TAC_1936"
+
+create_corps_commander = {
+	name = "Head"
+	portrait_path = "gfx/leaders/TAC/Portrait_General_Head.dds"
+	traits = { panzer_leader fortress_buster }
+	skill = 4
+	attack_skill = 5
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Sam"
+	portrait_path = "gfx/leaders/TAC/Portrait_General_Sam.dds"
+	traits = { adaptable winter_expert urban_assault_specialist }
+	skill = 3
+	attack_skill = 1
+	defense_skill = 5
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Snake"
+	portrait_path = "gfx/leaders/TAC/Portrait_General_Snake.dds"
+	traits = { trait_mountaineer hill_fighter }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Lovvi" # Aristocrat
+	picture = "Portrait_General_Lovvi.dds"
+	traits = { fast_planner organisational_leader expert_delegator }
+	skill = 5 
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 5
+	logistics_skill = 4
+}
+
+create_navy_leader = {
+	name = "Chris" # Aristocrat
+	picture = "Portrait_General_Chris.dds"
+	traits = { cuts_corners }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	maneuvering_skill = 4
+	coordination_skill = 5
+}

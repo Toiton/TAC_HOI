@@ -1,0 +1,46 @@
+TAC_national_decisions = {
+		
+	TAC_find_a_unit = {
+		icon = decision_category_military_operation
+		cost = 100
+		days_re_enable = 100
+		
+		available = {
+			has_army_experience > 99
+		}
+		complete_effect = {
+			add_manpower = 10000
+			army_experience = -100
+		}
+	}
+	
+	TAC_purge_old_members = {
+		icon = decision_category_military_operation
+		cost = 100
+		days_re_enable = 100
+		
+		available = {
+			has_manpower > 10000
+		}
+		complete_effect = {
+			army_experience = 100
+			add_manpower = -10000
+		}
+	}
+	
+	TAC_ping_everyone = {
+		icon = decision_category_military_operation
+		days_remove = 5
+		
+		visible = {
+			has_war = yes
+		}
+		
+		available = {
+			casualties > 50000
+		}
+		
+		complete_effect = {
+			add_manpower = 20000
+		}
+}
