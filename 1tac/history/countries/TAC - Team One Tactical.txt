@@ -117,6 +117,28 @@ create_corps_commander = {
 	logistics_skill = 2
 }
 
+create_corps_commander = {
+	name = "Gamma"
+	portrait_path = "gfx/leaders/TAC/Portrait_General_Gamma.dds"
+	traits = { old_guard ranger organizer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Luka"
+	portrait_path = "gfx/leaders/TAC/Portrait_General_Luka.dds"
+	traits = { infantry_officer harsh_leader commando }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}
+
 create_field_marshal = {
 	name = "Lovvi" # Aristocrat
 	picture = "Portrait_General_Lovvi.dds"
