@@ -81,6 +81,13 @@ create_country_leader = {
 	}
 }
 
+add_ideas = {
+	arma_fatigue
+	using_playwithsix
+	outdated_cup
+	call_for_reform
+}
+
 #Armed Forces
 oob = "TAC_1936"
 
