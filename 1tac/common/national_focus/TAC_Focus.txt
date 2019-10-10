@@ -1,0 +1,1087 @@
+focus_tree = {
+	id = TAC_Focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TAC
+		}
+	}
+	#Focus for Hug Him
+	focus = {
+		id = TAC_hughim
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 15
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_vivalasnippers }
+		mutually_exclusive = { 
+			focus = TAC_brofist 
+		}
+		mutually_exclusive = { 
+			focus = TAC_shakehands 
+		}
+		mutually_exclusive = { 
+			focus = TAC_makeeyecontact 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = hug_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	#Focus for Political Reform
+	focus = {
+		id = TAC_politicalreform
+		icon = GFX_goal_unknown
+		x = 8
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 150
+		}
+	}
+
+	#Focus for #blameSnippers
+	focus = {
+		id = TAC_blamesnippers
+		icon = GFX_goal_anschluss
+		x = 5
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_politicalreform }
+		mutually_exclusive = { focus = TAC_praisesnippers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.10
+		}
+	}
+
+	#Focus for Invite German Politicians
+	focus = {
+		id = TAC_invitegermanpoliticians
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 3
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_anewnation }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = nationalism
+				days = 720
+			}
+		}
+	}
+
+	#Focus for ACRE
+	focus = {
+		id = TAC_acre
+		icon = GFX_goal_generic_radar
+		x = 26
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAC_updatecup 
+			focus = TAC_phaseoutcup 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Artillery Advancements
+	focus = {
+		id = TAC_artilleryadvancements
+		icon = GFX_goal_generic_army_artillery2
+		x = 28
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAC_updatecup 
+			focus = TAC_phaseoutcup 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	#Focus for Support Focus
+	focus = {
+		id = TAC_supportfocus
+		icon = GFX_goal_generic_build_tank
+		x = 28
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_artilleryadvancements }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for RHS AFRF
+	focus = {
+		id = TAC_rhsafrf
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 24
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_phaseoutcup }
+		mutually_exclusive = { focus = TAC_rhsusaf }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for 3CB
+	focus = {
+		id = TAC_3cb
+		icon = GFX_focus_chi_british_cooperation
+		x = 30
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_updatecup }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = 3cb_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	#Focus for AA Focus
+	focus = {
+		id = TAC_aafocus
+		icon = GFX_focus_research2
+		x = 24
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_rhsafrf }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Uber-Tank
+	focus = {
+		id = TAC_ubertank
+		icon = GFX_focus_generic_army_tanks2
+		x = 23
+		y = 8
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAC_atfocus 
+			focus = TAC_aafocus 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Air Reform
+	focus = {
+		id = TAC_airreform
+		icon = GFX_goal_generic_air_fighter2
+		x = 36
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_modpackreform }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for MANW
+	focus = {
+		id = TAC_manw
+		icon = GFX_goal_generic_air_production
+		x = 25
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_armyreform }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = manw_bonus
+				bonus = 3.0
+				technology = tech_engineers
+				technology = tech_recon
+				technology = tech_field_hospital
+				technology = tech_military_police
+				technology = tech_signal_company
+				technology = tech_maintenance_company
+				technology = tech_logistics_company
+			}
+		}
+	}
+
+	#Focus for Signing with RHS?
+	focus = {
+		id = TAC_signingwithrhs
+		icon = GFX_goal_generic_army_tanks
+		x = 25
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_manw }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = signing_bonus
+				bonus = 3.0
+				technology = basic_medium_tank
+			}
+		}
+	}
+
+	#Focus for TFAR?
+	focus = {
+		id = TAC_tfar
+		icon = GFX_focus_AST_squander_bug
+		x = 23
+		y = 3
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_manw }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for AT Focus
+	focus = {
+		id = TAC_atfocus
+		icon = GFX_focus_research2
+		x = 22
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_rhsusaf }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = at_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_anti_tank
+			}
+		}
+	}
+
+	#Focus for The CUP Decision
+	focus = {
+		id = TAC_thecupdecision
+		icon = GFX_goal_continuous_naval_production
+		x = 26
+		y = 4
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAC_signingwithrhs 
+		}
+		prerequisite = { 
+			focus = TAC_modpackupdates 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Phase Out CUP
+	focus = {
+		id = TAC_phaseoutcup
+		icon = GFX_focus_jap_manchurian_project
+		x = 23
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_thecupdecision }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Modpack Reform
+	focus = {
+		id = TAC_modpackreform
+		icon = GFX_goal_unknown
+		x = 31
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Distribution Problems!
+	focus = {
+		id = TAC_distributionproblems
+		icon = GFX_goal_generic_consumer_goods
+		x = 42
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Lost and Found
+	focus = {
+		id = TAC_lostandfound
+		icon = GFX_focus_eng_the_kings_party
+		x = 9
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_decliningpopulation }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	#Focus for The New Status-Quo
+	focus = {
+		id = TAC_thenewstatusquo
+		icon = GFX_focus_generic_self_management
+		x = 7
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_seeknewallies }
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			set_politics = {
+				ruling_party = democratic
+			}
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for A New Leader?
+	focus = {
+		id = TAC_anewleader
+		icon = GFX_focus_mex_support_general_cedillo
+		x = 3
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_invitegermanpoliticians }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+			}
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for A New Nation
+	focus = {
+		id = TAC_anewnation
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 3
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_blamesnippers }
+		mutually_exclusive = { focus = TAC_thequestionofdemocracy }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+		}
+	}
+
+	#Focus for Update CUP
+	focus = {
+		id = TAC_updatecup
+		icon = GFX_goal_continuous_research
+		x = 29
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_thecupdecision }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Swifty?
+	focus = {
+		id = TAC_swifty
+		icon = GFX_goal_generic_scientific_exchange
+		x = 42
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_distributionproblems }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Join the Axis
+	focus = {
+		id = TAC_jointheaxis
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 2
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_anewleader }
+		mutually_exclusive = { focus = TAC_forgeourownpath }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			GER = { add_to_faction = TAC }
+		}
+	}
+
+	#Focus for The Question of Democracy
+	focus = {
+		id = TAC_thequestionofdemocracy
+		icon = GFX_focus_generic_treaty
+		x = 7
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_blamesnippers }
+		mutually_exclusive = { focus = TAC_anewnation }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
+	}
+
+	#Focus for Seek New Allies
+	focus = {
+		id = TAC_seeknewallies
+		icon = GFX_goal_continuous_increase_nu
+		x = 7
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_thequestionofdemocracy }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			diplomatic_relation = {
+				country = GER
+				relation = non_aggression_pact
+				active = no
+			}
+			add_popularity = { 
+				ideology = democratic 
+				popularity = 0.1 
+			}
+		}
+	}
+
+	#Focus for Old McDonald was a Communist?
+	focus = {
+		id = TAC_oldmcdonaldwasacommunist
+		icon = GFX_focus_chi_mission_to_the_us
+		x = 17
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_communistinfluenceathome }
+		mutually_exclusive = { focus = TAC_doyouhearthepeoplesing }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = { 
+				ideology = democratic 
+				popularity = 0.1 
+			}
+		}
+	}
+
+	#Focus for Our Own Communist Utopia
+	focus = {
+		id = TAC_ourowncommunistutopia
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		x = 17
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAC_eljefemaximo 
+		}
+		prerequisite = { 
+			focus = TAC_oldmcdonaldwasacommunist 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+
+	#Focus for Brothers in the East
+	focus = {
+		id = TAC_brothersintheeast
+		icon = GFX_goal_support_communism
+		x = 11
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAC_doyouhearthepeoplesing 
+		}
+		prerequisite = { 
+			focus = TAC_eljefemaximo 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			SOV = { add_to_faction = TAC }
+		}
+	}
+
+	#Focus for El Jefe Maximo
+	focus = {
+		id = TAC_eljefemaximo
+		icon = GFX_goal_generic_soviet_construction
+		x = 14
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_communistinfluenceathome }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+			}
+			add_stability = 0.05
+			add_ideas = political_commissars_focus
+		}
+	}
+
+	#Focus for Do You Hear the People Sing?
+	focus = {
+		id = TAC_doyouhearthepeoplesing
+		icon = GFX_focus_YUG_pan_slavic_congress
+		x = 11
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_communistinfluenceathome }
+		mutually_exclusive = { focus = TAC_oldmcdonaldwasacommunist }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Communist Influence at Home
+	focus = {
+		id = TAC_communistinfluenceathome
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 14
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAC_hughim 
+			focus = TAC_brofist 
+			focus = TAC_shakehands 
+			focus = TAC_makeeyecontact 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Brofist!
+	focus = {
+		id = TAC_brofist
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 17
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_vivalasnippers }
+		mutually_exclusive = { 
+			focus = TAC_hughim 
+		}
+		mutually_exclusive = { 
+			focus = TAC_shakehands 
+		}
+		mutually_exclusive = { 
+			focus = TAC_makeeyecontact 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Shake Hands
+	focus = {
+		id = TAC_shakehands
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 13
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_vivalasnippers }
+		mutually_exclusive = { 
+			focus = TAC_hughim 
+		}
+		mutually_exclusive = { 
+			focus = TAC_brofist 
+		}
+		mutually_exclusive = { 
+			focus = TAC_makeeyecontact 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Viva La Snippers
+	focus = {
+		id = TAC_vivalasnippers
+		icon = GFX_focus_rom_parties_end
+		x = 14
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_praisesnippers }
+		mutually_exclusive = { focus = TAC_awol }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_manpower = -1000
+		}
+	}
+
+	#Focus for Snippers Travel Fund
+	focus = {
+		id = TAC_snipperstravelfund
+		icon = GFX_focus_smiling_buddha
+		x = 9
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_lostandfound }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = { 
+			set_rule = { can_create_factions = yes }
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction = "Snippers Travel Fund"
+			}
+			add_to_faction = NZL
+
+			diplomatic_relation = {
+				country = GER
+				relation = non_aggression_pact
+				active = no
+			}
+		}
+	}
+
+	#Focus for AWOL
+	focus = {
+		id = TAC_awol
+		icon = GFX_focus_prc_infiltration
+		x = 9
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_praisesnippers }
+		mutually_exclusive = { focus = TAC_vivalasnippers }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_political_power= -50
+			add_stability = -0.2
+		}
+	}
+
+	#Focus for #praiseSnippers
+	focus = {
+		id = TAC_praisesnippers
+		icon = GFX_goal_generic_demand_territory
+		x = 11
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_politicalreform }
+		mutually_exclusive = { focus = TAC_blamesnippers }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Oh The Humanity
+	focus = {
+		id = TAC_ohthehumanity
+		icon = GFX_focus_YUG_rogozarski
+		x = 34
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_sokkasidealstrategicupgrade }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Sokka's Ideal Strategic Upgrade
+	focus = {
+		id = TAC_sokkasidealstrategicupgrade
+		icon = GFX_goal_poland_goal
+		x = 34
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_verisetsiviilit }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Veriset Siviilit
+	focus = {
+		id = TAC_verisetsiviilit
+		icon = GFX_goal_generic_air_bomber
+		x = 34
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_airreform }
+		mutually_exclusive = { focus = TAC_awarontrees }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for CUP 2.0
+	focus = {
+		id = TAC_cup20
+		icon = GFX_focus_eng_organise_the_blackshirts
+		x = 30
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAC_3cb 
+		}
+		prerequisite = { 
+			focus = TAC_supportfocus 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Forge Our Own Path
+	focus = {
+		id = TAC_forgeourownpath
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_anewleader }
+		mutually_exclusive = { focus = TAC_jointheaxis }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+		}		
+	}
+
+	#Focus for Friends With Benefits
+	focus = {
+		id = TAC_friendswithbenefits
+		icon = GFX_focus_chi_british_cooperation
+		x = 7
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_thenewstatusquo }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			ENG = { add_to_faction = TAC }
+		}
+	}
+
+	#Focus for Declining Population
+	focus = {
+		id = TAC_decliningpopulation
+		icon = GFX_focus_eng_global_defense
+		x = 9
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_awol }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_manpower = -10000
+		}
+	}
+
+	#Focus for Make Eye Contact
+	focus = {
+		id = TAC_makeeyecontact
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 11
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_vivalasnippers }
+		mutually_exclusive = { 
+			focus = TAC_hughim 
+		}
+		mutually_exclusive = { 
+			focus = TAC_shakehands 
+		}
+		mutually_exclusive = { 
+			focus = TAC_brofist 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			diplomatic_relation = {
+				country = SOV
+				relation = non_aggression_pact
+				active = yes
+			}
+			
+			diplomatic_relation = {
+				country = GER
+				relation = non_aggression_pact
+				active = no
+			}
+		}
+	}
+
+	#Focus for Army Reform
+	focus = {
+		id = TAC_armyreform
+		icon = GFX_goal_rhineland
+		x = 26
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_modpackreform }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Seek Swedish Management
+	focus = {
+		id = TAC_seekswedishmanagement
+		icon = GFX_focus_eng_god_save_the_king
+		x = 27
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_armyreform }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Modpack Updates
+	focus = {
+		id = TAC_modpackupdates
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 27
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_seekswedishmanagement }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for RHS USAF
+	focus = {
+		id = TAC_rhsusaf
+		icon = GFX_focus_chi_mission_to_the_us
+		x = 22
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_phaseoutcup }
+		mutually_exclusive = { focus = TAC_rhsafrf }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for ACRE Special Branch
+	focus = {
+		id = TAC_acrespecialbranch
+		icon = GFX_goal_generic_scientific_exchange
+		x = 26
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_acre }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Pull Up! PULL UP!
+	focus = {
+		id = TAC_pulluppullup
+		icon = GFX_goal_generic_occupy_start_war
+		x = 38
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_theassetwhoreinitiative }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A War On Trees
+	focus = {
+		id = TAC_awarontrees
+		icon = GFX_focus_hol_fokker
+		x = 38
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_airreform }
+		mutually_exclusive = { focus = TAC_verisetsiviilit }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Asset Whore Initiative
+	focus = {
+		id = TAC_theassetwhoreinitiative
+		icon = GFX_focus_chi_flying_tigers
+		x = 38
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAC_awarontrees }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+#End of focuses 
+ }
